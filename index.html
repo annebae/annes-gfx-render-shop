@@ -9,29 +9,62 @@
 <body>
   <header>
     <h1>Anne's GFX Render Shop</h1>
+    <nav>
+      <button id="view-cart">🛒 View Cart</button>
+    </nav>
   </header>
+
   <main>
     <section class="products">
-      <div class="product">
-        <img src="assets/images/annebae-render.jpg" alt="Annebae GFX Render">
-        <h2>Annebae GFX Render</h2>
-        <p>Amazing render created by AnneBae herself!</p>
+      <!-- Product 1 -->
+      <div class="product" data-id="1" data-name="AnneBae GFX Render" data-price="20" data-description="A stunning GFX render by AnneBae." data-image="assets/images/annebae-gfx.png">
+        <img src="assets/images/annebae-gfx.png" alt="AnneBae GFX Render">
+        <h2>AnneBae GFX Render</h2>
+        <p>$20</p>
+        <button class="details-btn">View Details</button>
       </div>
-      <div class="product">
-        <img src="assets/images/lisa-gaming-render.jpg" alt="Lisa Gaming GFX Render">
+
+      <!-- Product 2 -->
+      <div class="product" data-id="2" data-name="Lisa Gaming GFX Render" data-price="25" data-description="A bold and stylish render by Lisa Gaming." data-image="assets/images/lisa-gaming-gfx.png">
+        <img src="assets/images/lisa-gaming-gfx.png" alt="Lisa Gaming GFX Render">
         <h2>Lisa Gaming GFX Render</h2>
-        <p>High-quality gaming render for content creators.</p>
+        <p>$25</p>
+        <button class="details-btn">View Details</button>
       </div>
-      <div class="product">
-        <img src="assets/images/curious-yapper-render.jpg" alt="Curious Yapper GFX Render">
+
+      <!-- Product 3 -->
+      <div class="product" data-id="3" data-name="Curious Yapper GFX Render" data-price="15" data-description="A fun and quirky render by Curious Yapper." data-image="assets/images/curious-yapper-gfx.png">
+        <img src="assets/images/curious-yapper-gfx.png" alt="Curious Yapper GFX Render">
         <h2>Curious Yapper GFX Render</h2>
-        <p>Stylish and modern render for your needs.</p>
+        <p>$15</p>
+        <button class="details-btn">View Details</button>
       </div>
     </section>
   </main>
-  <footer>
-    <p>© 2024 Anne's GFX Render Shop. All rights reserved.</p>
-  </footer>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: $<span id="cart-total">0</span></p>
+      <button id="checkout">Checkout</button>
+      <button id="close-cart">Close</button>
+    </div>
+  </div>
+
+  <!-- Product Details Modal -->
+  <div id="product-modal" class="modal hidden">
+    <div class="modal-content">
+      <img id="product-image" src="" alt="">
+      <h2 id="product-name"></h2>
+      <p id="product-description"></p>
+      <p>Price: $<span id="product-price"></span></p>
+      <button id="add-to-cart">Add to Cart</button>
+      <button id="close-details">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
